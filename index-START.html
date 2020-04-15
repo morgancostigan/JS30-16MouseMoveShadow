@@ -37,7 +37,7 @@
 <script>
   const hero = document.querySelector('.hero');
   const text = hero.querySelector('h1');
-  const walk = 100; //100px 
+  const walk = 400; //number of px 
 
 
   function shadow(e) {
@@ -60,7 +60,12 @@
       ${xWalk}px ${yWalk}px 20px grey, 
       ${xWalk * -1}px ${yWalk}px 20px blue,
       ${xWalk}px ${yWalk * -1}px 20px rgba(255, 0, 255, .7), 
-      ${xWalk * -1}px ${yWalk * -1}px 20px green 
+      ${xWalk * -1}px ${yWalk * -1}px 20px green,
+
+      ${xWalk * .5}px ${yWalk * .5}px 20px green, 
+      ${xWalk * -.5}px ${yWalk * .5}px 20px rgba(255, 0, 255, .7),
+      ${xWalk * .5}px ${yWalk * -.5}px 20px blue, 
+      ${xWalk * -.5}px ${yWalk * -.5}px 20px grey 
     `; // x, y, blur, color (maned or rgba)
   }//end shadow function
 
