@@ -39,7 +39,12 @@
   const text = hero.querySelector('h1');
 
   function shadow(e) {
-    console.log(e);
+    // const width = hero.offsetWidth; //old way
+    // const height = hero.offsetHeight; //old way
+    const { offsetWidth: width , offsetHeight: height } = hero; //new ES6 way
+    let { offsetX: x , offsetY: y } = e;
+    console.log(x, y);
+    
     
   }//end shadow function
 
