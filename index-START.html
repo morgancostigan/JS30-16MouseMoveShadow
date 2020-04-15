@@ -43,7 +43,15 @@
     // const height = hero.offsetHeight; //old way
     const { offsetWidth: width , offsetHeight: height } = hero; //new ES6 way
     let { offsetX: x , offsetY: y } = e;
+    // console.log(this, e.target);
+
+    //to keep XY from resetting to child elements and instead staying tied to top left corner we do the following
+    if (this !== e.target) {
+      x = x + e.target.offsetLeft;
+      y = y + e.target.offsetTop;
+    }//end IF
     console.log(x, y);
+    
     
     
   }//end shadow function
